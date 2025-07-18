@@ -1,22 +1,18 @@
 # LÖVE Potion
 
-[LÖVE](https://love2d.org) for Nintendo Homebrew.
+A port of [LÖVE](https://love2d.org) for Nintendo Homebrew. This is not my project. I am using a fork of this project to customize metadata.
 
-You can find the API reference and how to start making your own games [on the Wiki!](https://lovebrew.org)
+## Why?
 
-# Testing
+Thanks to some jank related to the Wii U, only some of the latest commits of LÖVE Potion are fully functional. 
 
-To test LÖVE Potion, you must first intialize the submodules:
+This is not the fault of the developer at all, in fact I find her work on this project fantastic. The fact this even exists for Wii U is amazing. Thank you for feeding my hyperfixations, [TurtleP](https://github.com/TurtleP) (and other contributors).
 
-```bash
-git submodule update --init
-```
+Anyway, with that aside, why the hell does this fork exist? Can't I just use [the bundler](https://bundle.lovebrew.org/) to add metadata?
 
-Then you can use the latest version from the [releases page](https://github.com/lovebrew/lovepotion/releases/latest) and use the submodule content as your game directory. Alternatively, making a fused game with the content is possible as well.
+Unfortunately, given the fact that the latest builds are pretty much all I can use right now, the bundler won't work, as it relies instead on the latest release (3.0.1). So, to add metadata, I'm modifying the source directly. This is a fairly quick and easy method to get things working. From there, I can use the [manual fusing method](https://lovebrew.org/getting-started/get-lovepotion#manual-fusing) instead to add my own code.
 
-## Build Statuses
-
-N/A
+TL;DR: Wii U jank. Need latest builds. Can't easily bundle latest builds. Add custom metadata via source code instead. Yippee!
 
 ## Help and Support
 
