@@ -18,19 +18,19 @@ endif()
 include(FetchContent)
 
 set(LOVE_VERSION "12.0")
-set(APP_VERSION  "3.1.0")
+set(APP_VERSION  "1.0.0")
 
 target_compile_definitions(${PROJECT_NAME} PRIVATE
     __APP_VERSION__=\"${APP_VERSION}\" __LOVE_VERSION__=\"${LOVE_VERSION}\"
 )
 
-set(APP_TITLE  "LÖVE Potion")
-set(APP_AUTHOR "LÖVEBrew Team")
+set(APP_TITLE  "Wii U GamePad Input Test")
+set(APP_AUTHOR "Damienne")
 
 file(COPY libraries/luasocket DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")
-    set(APP_TITLE "LÖVE Potion (${COMMIT_HASH})")
+##    set(APP_TITLE "LÖVE Potion (${COMMIT_HASH})") nuh uh
     target_compile_definitions(${PROJECT_NAME} PRIVATE __DEBUG__=1)
 else()
     target_compile_definitions(${PROJECT_NAME} PRIVATE __DEBUG__=0)
@@ -150,7 +150,7 @@ if (NINTENDO_WIIU)
 
     set(APP_ICON platform/cafe/icon.png)
     if(CMAKE_BUILD_TYPE STREQUAL "Debug")
-        set(APP_ICON platform/cafe/icon-dev.png)
+##        set(APP_ICON platform/cafe/icon-dev.png) also nuh uh. 
     endif()
 
     wut_create_rpx(${PROJECT_NAME})
